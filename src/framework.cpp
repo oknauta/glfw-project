@@ -1,5 +1,5 @@
 // File: `framework.cpp`
-// Date: `2024-07-03`
+// Date: `2024-07-03 | 2024-07-22`
 
 #include "framework.hpp"
 
@@ -34,22 +34,17 @@ Framework::Framework(const int width, const int height, const char *windowTitle)
 
 void Framework::Render()
 {
-    // Cleaning scene
-    glClear(GL_COLOR_BUFFER_BIT);
-
-    // Swapping frames
-    glfwSwapBuffers(window);
-
-    // Detecting controllers
-    glfwPollEvents();
-}
-
-void Framework::Update()
-{
-    // If window doesn't close, do something
+        // If window doesn't close, do something
     while(!glfwWindowShouldClose(window))
     {
-        Render();
+        // Cleaning scene
+        glClear(GL_COLOR_BUFFER_BIT);
+
+        // Swapping frames
+        glfwSwapBuffers(window);
+
+        // Detecting controllers
+        glfwPollEvents();
     }
 }
 
